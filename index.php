@@ -5,7 +5,7 @@
 
 	<div class="article">
 	
-	    <h2><?php the_title(); ?></a></h2>
+	    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	<?php the_content(); ?>
 	Dieser Artikel hat <a href="<?php the_permalink() ?>#respond" rel="nofollow"><?php comments_number('0 Kommentare', '1 Kommentar', '% Kommentare'); ?></a> <a href="<?php the_permalink() ?>#respond" rel="nofollow">Gebe einen Kommentar ab!</a>
 	
