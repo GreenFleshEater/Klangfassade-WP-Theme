@@ -37,6 +37,11 @@ Version: 1.6
 		hyphenate-lines:1;
 	}
 
+	@mixin margin-middle {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
@@ -54,13 +59,11 @@ body {
 
 		#header {
 		position: relative;
-		margin-left: auto;
-		margin-right: auto;
+		@include margin-middle;
 		max-width: 620px;
 
 			.logo {
-				margin-left: auto;
-				margin-right: auto;
+				@include margin-middle;
 				max-width: 300px;
 				height: 300px;
 				width: 100%;
@@ -122,8 +125,7 @@ body {
 			position: relative;
 			max-width: 620px;
 			width: 99%;
-			margin-left: auto;
-			margin-right: auto;
+			@include margin-middle;
 			font-family: $copytext;
 			color: #444;
 			font-size: 1em;
@@ -232,8 +234,7 @@ body {
 			font-size: 13px;
 			margin-top: 70px;
 			max-width: 620px;
-			margin-right: auto;
-			margin-left: auto;
+			@include margin-middle;
 
 			a {
 				text-decoration: none;
