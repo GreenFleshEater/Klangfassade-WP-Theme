@@ -1,0 +1,252 @@
+/*
+Theme Name: Klangfassade 1.5
+Theme URI: http://www.greenflesheater.com
+Description: The Autumn Version
+Author: Niklas Barning
+Version: 1.6
+*/
+
+// Ein paar Variables
+
+	$white: white;
+	$lila:	#604e5f;
+	$grau: 	#444;
+	$blau: #2EC0FE;
+	$hellgrau: #DBDBDB;
+
+	$copytext: 'Open Sans', sans-serif;
+
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+	
+	background-color: $white;
+	margin: 0%;
+
+	#top {
+		height: 385px;
+		background-color: $lila;
+
+		@media (max-width: 500px) {
+			height: 100%;
+		}
+
+		#header {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 620px;
+
+			.logo {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 300px;
+				height: 300px;
+				width: 100%;
+
+				@media (max-width: 500px) {
+					-webkit-transform: scale(.8);
+					-moz-transform: scale(.8);
+					-ms-transform: scale(.8);
+					-o-transform: scale(.8);
+					transform: scale(.8);
+					height: 280px;
+				}
+			}
+
+			.navi {
+				max-width: 620px;
+				font-family: $copytext;
+				font-size: 20px;
+				word-spacing: 25px;
+				text-align: center;
+
+				ul {
+					padding: 0%;
+				}
+
+				li {
+					list-style: none;
+					display: inline;
+					@media (max-width: 500px) {
+						margin-bottom: 8%;
+						list-style: none;
+						display: block;
+					}
+				}
+
+
+				a {
+					text-decoration: none;
+					color: $white;
+					-moz-transition-property: opacity;
+					-moz-transition-duration: 0.2s;
+					-moz-transition-timing-function: ease-out;
+					-o-transition-property: opacity;
+					-o-transition-duration: 0.2s;
+					-webkit-transition-property: opacity;
+					-webkit-transition-duration: 0.2s;
+
+					@media (max-width: 500px) {
+						padding: 2%;
+						border-radius: 5px;
+						color: #604e5f;
+						background-color: $white;
+					}
+
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
+
+		}
+	}
+
+		#content {
+			position: relative;
+			max-width: 620px;
+			width: 99%;
+			margin-left: auto;
+			margin-right: auto;
+			font-family: $copytext;
+			color: #444;
+			font-size: 1em;
+			line-height: 28px;
+			margin-bottom: 20px;
+	
+			-ms-word-break:break-word;
+			word-break:break-word;
+			-webkit-hyphens:auto;
+			-moz-hyphens:auto;
+			hyphens:auto;
+			-webkit-hyphenate-before:1;
+			-webkit-hyphenate-after:1;
+			hyphenate-lines:1;
+
+			.article {
+				font-family: $copytext;
+				color: $grau;
+				font-size: 1em;
+				line-height: 2em;
+				margin-bottom: 20px;
+				border-bottom: 1px solid $hellgrau;
+				padding-bottom: 10px;
+
+				@media (max-width: 500px) {
+					margin-bottom: 0%;
+				}
+
+				h2 {
+
+					color: $grau;
+					font-size: 3.8em;
+					text-align: center;
+					font-family: $copytext;
+					line-height: 1.3em;
+					margin-top: 60px;
+					margin-bottom: 0px;
+					@media (max-width: 500px) {
+						font-size: 3em;
+					}
+
+					a {
+						text-decoration: none;
+					}
+				}
+
+				a {
+					color: $grau;
+					-moz-transition-property: opacity;
+					-moz-transition-duration: 0.2s;
+					-moz-transition-timing-function: ease-out;
+					-o-transition-property: opacity;
+					-o-transition-duration: 0.2s;
+					-webkit-transition-property: opacity;
+					-webkit-transition-duration: 0.2s;
+
+					&:hover {
+						opacity: .5;
+					}
+				}
+			}
+
+			#kommentare {
+				.comment {
+						padding-top: 5px;
+						margin-bottom: 20px;
+
+						a {
+							color: $grau;
+							text-decoration: underline;
+						}
+						
+					}
+			}
+
+			#commentform {
+
+				input {
+					border: 1px solid #444;
+					padding: 1%;
+				}
+
+				label {
+					margin-left: 1%;
+				}
+			}
+
+			.suche {
+				position: relative;
+				height: 50px;
+				margin-top: 35px;
+
+				input#s{
+					 position: relative;
+					 left: 28%;
+					 width: 250px;
+					 border: 1px solid #444;
+					 height: 35px;
+					 padding-left: 15px;
+					 padding-right: 15px;
+					 -webkit-border-radius: 10px;
+					 -moz-border-radius: 10px;
+					 border-radius: 10px;
+					 font-family: $copytext;
+					 color: $grau;
+					 font-size: 1em;
+
+					 @media (max-width: 500px) {
+					 	left: 16%;
+					 }
+				}
+			}
+		}
+
+		#footer {
+			font-family: $copytext;
+			text-align: center;
+			font-size: 13px;
+			margin-top: 70px;
+			max-width: 620px;
+			margin-right: auto;
+			margin-left: auto;
+
+			a {
+				text-decoration: none;
+				color: $grau;
+				-moz-transition-property: opacity;
+				-moz-transition-duration: 0.2s;
+				-moz-transition-timing-function: ease-out;
+				-o-transition-property: opacity;
+				-o-transition-duration: 0.2s;
+				-webkit-transition-property: opacity;
+				-webkit-transition-duration: 0.2s;
+
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+	
+}
