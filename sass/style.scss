@@ -16,6 +16,27 @@ Version: 1.6
 
 	$copytext: 'Open Sans', sans-serif;
 
+	@mixin opacity-prev {
+		-moz-transition-property: opacity;
+		-moz-transition-duration: 0.2s;
+		-moz-transition-timing-function: ease-out;
+		-o-transition-property: opacity;
+		-o-transition-duration: 0.2s;
+		-webkit-transition-property: opacity;
+		-webkit-transition-duration: 0.2s;
+	}
+
+	@mixin word-break {
+		-ms-word-break:break-word;
+		word-break:break-word;
+		-webkit-hyphens:auto;
+		-moz-hyphens:auto;
+		hyphens:auto;
+		-webkit-hyphenate-before:1;
+		-webkit-hyphenate-after:1;
+		hyphenate-lines:1;
+	}
+
 	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
@@ -57,7 +78,7 @@ body {
 			.navi {
 				max-width: 620px;
 				font-family: $copytext;
-				font-size: 20px;
+				font-size: 1.25em;
 				word-spacing: 25px;
 				text-align: center;
 
@@ -79,13 +100,7 @@ body {
 				a {
 					text-decoration: none;
 					color: $white;
-					-moz-transition-property: opacity;
-					-moz-transition-duration: 0.2s;
-					-moz-transition-timing-function: ease-out;
-					-o-transition-property: opacity;
-					-o-transition-duration: 0.2s;
-					-webkit-transition-property: opacity;
-					-webkit-transition-duration: 0.2s;
+					@include opacity-prev;
 
 					@media (max-width: 500px) {
 						padding: 2%;
@@ -114,15 +129,9 @@ body {
 			font-size: 1em;
 			line-height: 28px;
 			margin-bottom: 20px;
-	
-			-ms-word-break:break-word;
-			word-break:break-word;
-			-webkit-hyphens:auto;
-			-moz-hyphens:auto;
-			hyphens:auto;
-			-webkit-hyphenate-before:1;
-			-webkit-hyphenate-after:1;
-			hyphenate-lines:1;
+			
+			@include word-break;
+
 
 			.article {
 				font-family: $copytext;
@@ -157,13 +166,7 @@ body {
 
 				a {
 					color: $grau;
-					-moz-transition-property: opacity;
-					-moz-transition-duration: 0.2s;
-					-moz-transition-timing-function: ease-out;
-					-o-transition-property: opacity;
-					-o-transition-duration: 0.2s;
-					-webkit-transition-property: opacity;
-					-webkit-transition-duration: 0.2s;
+					@include opacity-prev;
 
 					&:hover {
 						opacity: .5;
@@ -235,13 +238,7 @@ body {
 			a {
 				text-decoration: none;
 				color: $grau;
-				-moz-transition-property: opacity;
-				-moz-transition-duration: 0.2s;
-				-moz-transition-timing-function: ease-out;
-				-o-transition-property: opacity;
-				-o-transition-duration: 0.2s;
-				-webkit-transition-property: opacity;
-				-webkit-transition-duration: 0.2s;
+				@include opacity-prev;
 
 				&:hover {
 					opacity: 0.5;
