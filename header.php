@@ -30,6 +30,23 @@
 <body>
 
   <div id="top">
+    <div id="background">
+    <?php
+
+$url = "./wp-content/themes/Klangfassade_1.6/img/slider/";
+if ($handle = opendir($url)) {
+  echo "<ul>";
+    while (false !== ($file = readdir($handle))) {
+        if ($file != "." && $file != "..") {
+            echo "<li><img src=\"". $url. "/". $file ."\" /></li>\n";
+        }
+    }
+    echo "</ul>";
+    closedir($handle);
+}
+?>
+
+</div>
 
    <div id="header">
 
