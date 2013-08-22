@@ -1,0 +1,38 @@
+@mixin opacity-prev {
+		-moz-transition-property: opacity;
+		-moz-transition-duration: 0.2s;
+		-moz-transition-timing-function: ease-out;
+		-o-transition-property: opacity;
+		-o-transition-duration: 0.2s;
+		-webkit-transition-property: opacity;
+		-webkit-transition-duration: 0.2s;
+	}
+
+	@mixin word-break {
+		-ms-word-break:break-word;
+		word-break:break-word;
+		-webkit-hyphens:auto;
+		-moz-hyphens:auto;
+		hyphens:auto;
+		-webkit-hyphenate-before:1;
+		-webkit-hyphenate-after:1;
+		hyphenate-lines:1;
+	}
+
+	@mixin margin-middle {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@mixin border-radius ($radius) {
+		-webkit-border-radius: $radius;
+		-moz-border-radius: $radius;
+		border-radius: $radius;
+	}
+
+	@mixin transition-all ($zeit) {
+	  -webkit-transition: all $zeit ease-in-out;
+	  -moz-transition: all $zeit ease-in-out;
+	  -o-transition: all $zeit ease-in-out;
+	  transition: all $zeit ease-in-out;
+	}
