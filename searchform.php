@@ -1,6 +1,6 @@
 <?php
 $querystring = esc_attr(apply_filters('the_search_query', get_search_query()));
-$searchstring = "Geben Sie einen Suchbegriff ein.";
+$searchstring = "Suche";
 if (empty($querystring)) { $querystring = $searchstring; }
 ?>
 

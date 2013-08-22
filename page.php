@@ -1,18 +1,19 @@
 <?php get_header(); ?>
 
-<div id="content">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+ <div class="content">
 
-	<div class="article">
+ 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  	
+  		<div class="post"> 
 	
-	    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+	    <h2><?php the_title(); ?></a></h2>
 	<?php the_content(); ?>
 	
 	</div>
-<?php endwhile; endif; ?>
-<?php comments_template(); ?>
+<?php endwhile; else: ?>
+<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
 
-<div class="suche"><?php include ('searchform.php'); ?></div>
 
 </div>
 
