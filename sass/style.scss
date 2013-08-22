@@ -1,9 +1,9 @@
 /*
-Theme Name: Klangfassade_1.6
+Theme Name: Klangfassade_1.7
 Theme URI: http://www.greenflesheater.com
 Description: The Summer Version
 Author: Niklas Barning
-Version: 1.6
+Version: 1.7
 */
 
 // Ein paar Variables
@@ -28,8 +28,8 @@ $max: 620px;
 			background-color: $lila;
 			background-image: url(img/slider/rotator.php);
 			background-size: cover;
-			background-position:center; 
-
+			background-position:center;
+			background-attachment: fixed;
 			@media (max-width: $breakpoint) {
 				height: 100%;
 			}
@@ -59,17 +59,16 @@ $max: 620px;
 					max-width: $max;
 					font-family: $copytext;
 					font-size: 1.25em;
-					word-spacing: 25px;
 					text-align: center;
 					.dropdown {
 							ul {
-								padding: 0%;
+								
 
 							li {
 								list-style: none;
-								display: inline;
-								padding-left: 3%;
-								padding-right: 3%;
+								display: inline-block;
+								padding-left: 2%;
+								padding-right: 2%;
 								@media (max-width: $breakpoint) {
 									margin-bottom: 8%;
 									list-style: none;
@@ -185,7 +184,7 @@ $max: 620px;
 					background-color: $white;
 					@include transition-all (0.2s);
 					&:hover {
-						background-color: $gruen;
+						background-color: $lila;
 						color: $white;
 						border-color: $grau;
 					}

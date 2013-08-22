@@ -23,10 +23,6 @@
 <?php wp_head(); ?>
 </head>
 
-
-
-</head>
-
 <body>
 
   <div id="top">
