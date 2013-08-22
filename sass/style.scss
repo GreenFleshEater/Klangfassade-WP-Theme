@@ -59,41 +59,44 @@ $max: 620px;
 					font-family: $copytext;
 					font-size: 1.25em;
 					text-align: center;
-					.dropdown {
-							ul {
-								
+					ul {
+						
 
-							li {
+						li {
+							
+							list-style: none;
+							display: inline-block;
+							padding-left: 2%;
+							padding-right: 2%;
+							@media (max-width: $breakpoint) {
+								margin-bottom: 8%;
 								list-style: none;
-								display: inline-block;
-								padding-left: 2%;
-								padding-right: 2%;
-								@media (max-width: $breakpoint) {
-									margin-bottom: 8%;
-									list-style: none;
-									display: block;
-								}
+								display: block;
+							}
+							
+						}
+
+
+						a {
+							text-decoration: none;
+							color: $white;
+							@include opacity-prev;
+
+							@media (max-width: $breakpoint) {
+								padding: 2%;
+								border-radius: 5px;
+								color: #604e5f;
+								background-color: $white;
 							}
 
-
-							 a {
-								text-decoration: none;
-								color: $white;
-								@include opacity-prev;
-
-								@media (max-width: $breakpoint) {
-									padding: 2%;
-									border-radius: 5px;
-									color: #604e5f;
-									background-color: $white;
-								}
-
-								&:hover {
-									opacity: 0.5;
-								}
-							} 
-						}
+							&:hover {
+								opacity: 0.5;
+							}
+						} 
 					}
+					
+					
+					
 				}
 
 			}
@@ -160,8 +163,8 @@ $max: 620px;
 
 			}
 			#kommentare {
-			max-width: $max;
-			@include margin-middle;
+				max-width: $max;
+				@include margin-middle;
 				.comment {
 					padding-top: 5px;
 					margin-bottom: 20px;
@@ -175,8 +178,8 @@ $max: 620px;
 			}
 
 			#commentform {
-			max-width: $max;
-			@include margin-middle;
+				max-width: $max;
+				@include margin-middle;
 				input {
 					border: 1px solid $grau;
 					padding: 1%;
