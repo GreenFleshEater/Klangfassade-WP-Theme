@@ -59,43 +59,47 @@ $max: 620px;
 					font-family: $copytext;
 					font-size: 1.25em;
 					text-align: center;
-					ul {
-						
-
-						li {
-							
-							list-style: none;
-							display: inline-block;
-							padding-left: 2%;
-							padding-right: 2%;
-							@media (max-width: $breakpoint) {
-								margin-bottom: 8%;
-								list-style: none;
-								display: block;
-							}
-							
-						}
-
-
-						a {
-							text-decoration: none;
-							color: $white;
-							@include opacity-prev;
-
-							@media (max-width: $breakpoint) {
-								padding: 2%;
-								border-radius: 5px;
-								color: #604e5f;
-								background-color: $white;
-							}
-
-							&:hover {
-								opacity: 0.5;
-							}
-						} 
+					.dropdown {
+						padding: 0%;
 					}
+						ul {
+
+
+							li {
+
+								list-style: none;
+								display: inline-block;
+								padding-left: 2%;
+								padding-right: 2%;
+								@media (max-width: $breakpoint) {
+									margin-bottom: 8%;
+									list-style: none;
+									display: block;
+								}
+
+							}
+
+
+							a {
+								text-decoration: none;
+								color: $white;
+								@include opacity-prev;
+
+								@media (max-width: $breakpoint) {
+									padding: 2%;
+									border-radius: 5px;
+									color: #604e5f;
+									background-color: $white;
+								}
+
+								&:hover {
+									opacity: 0.5;
+								}
+							} 
+						}
 					
-					
+
+
 					
 				}
 
