@@ -7,24 +7,20 @@ Version: 1.6
 */
 
 // Ein paar Variables
-
+@import "bourbon/bourbon";
 @import "colors";
 @import "mixins";
 
 $copytext: 'Open Sans', sans-serif;
-$breakpoint: 500px;
-$max: 620px;
-
+$breakpoint: em(500);
+$max: em(620);
 
 	@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
 	body {
-
 		background-color: $white;
 		margin: 0%;
-
 		#top {
-			height: 385px;
+			height: em(385);
 			background-color: $lila;
 			background-image: url(img/slider/rotator.php);
 			background-size: cover;
@@ -37,20 +33,14 @@ $max: 620px;
 				position: relative;
 				@include margin-middle;
 				max-width: $max;
-
 				.logo {
 					@include margin-middle;
-					max-width: 300px;
-					height: 300px;
+					max-width: em(300);
+					height: em(300);
 					width: 100%;
-
 					@media (max-width: $breakpoint) {
-						-webkit-transform: scale(.8);
-						-moz-transform: scale(.8);
-						-ms-transform: scale(.8);
-						-o-transform: scale(.8);
-						transform: scale(.8);
-						height: 280px;
+						@include transform(scale(0.8));
+						height: em(280);
 					}
 				}
 
@@ -62,47 +52,38 @@ $max: 620px;
 					.dropdown {
 						padding: 0%;
 					}
-						ul {
-
-
-							li {
-
-								list-style: none;
-								display: inline-block;
-								padding-left: 2%;
-								padding-right: 2%;
-								@media (max-width: $breakpoint) {
-									margin-bottom: 8%;
-									list-style: none;
-									display: block;
-								}
-
-							}
-
-
-							a {
-								text-decoration: none;
-								color: $white;
-								@include opacity-prev;
-
-								@media (max-width: $breakpoint) {
-									padding: 2%;
-									border-radius: 5px;
-									color: #604e5f;
-									background-color: $white;
-								}
-
-								&:hover {
-									opacity: 0.5;
-								}
-							} 
+					ul {
+						@media (max-width: $breakpoint) {
+							padding-left: em(0);
 						}
-					
+						li {
 
-
-					
+							list-style: none;
+							display: inline-block;
+							padding-left: 2%;
+							padding-right: 2%;
+							@media (max-width: $breakpoint) {
+								margin-bottom: 8%;
+								list-style: none;
+								display: block;
+							}
+						}
+						a {
+							text-decoration: none;
+							color: $white;
+							@include transition (opacity 0.2s ease-in-out);
+							@media (max-width: $breakpoint) {
+								padding: 2%;
+								border-radius: 5px;
+								color: #604e5f;
+								background-color: $white;
+							}
+							&:hover {
+								opacity: 0.5;
+							}
+						} 
+					}	
 				}
-
 			}
 		}
 
@@ -113,71 +94,63 @@ $max: 620px;
 			font-family: $copytext;
 			color: #444;
 			font-size: 1em;
-			line-height: 28px;
-			margin-bottom: 20px;
-			
+			line-height: em(28);
+			margin-bottom: em(20);
 			@include word-break;
-
-
 			.article {
 				font-family: $copytext;
 				color: $grau;
 				font-size: 1em;
 				line-height: 2em;
-				margin-bottom: 20px;
+				margin-bottom: em(20);
 				border-bottom: 1px solid $hellgrau;
-				padding-bottom: 10px;
+				padding-bottom: em(10);
 				max-width: $max;
 				@include margin-middle;
-
 				@media (max-width: $breakpoint) {
 					margin-bottom: 0%;
+					padding: em(10);
 				}
-
 				h2 {
-
 					color: $grau;
 					font-size: 2em;
 					text-align: center;
 					font-family: $copytext;
 					line-height: 1.3em;
-					margin-top: 60px;
+					margin-top: em(25);
 					margin-bottom: 0px;
 					@media (max-width: $breakpoint) {
 						font-size: 3em;
+						margin-top: em(20);
 					}
-
 					a {
 						text-decoration: none;
 					}
 				}
-
 				a {
 					color: $grau;
-					@include opacity-prev;
-
+					@include transition (opacity 0.2s ease-in-out);
 					&:hover {
 						opacity: .5;
 					}
 				}
 			}
+
 			#respond {
 				max-width: 620px;
 				@include margin-middle;
-
 			}
+
 			#kommentare {
 				max-width: $max;
 				@include margin-middle;
 				.comment {
-					padding-top: 5px;
-					margin-bottom: 20px;
-
+					padding-top: em(5);
+					margin-bottom: em(20);
 					a {
 						color: $grau;
 						text-decoration: underline;
 					}
-
 				}
 			}
 
@@ -188,33 +161,30 @@ $max: 620px;
 					border: 1px solid $grau;
 					padding: 1%;
 					background-color: $white;
-					@include transition-all (0.2s);
+					@include transition (all 0.2s ease-in-out);
 					&:hover {
 						background-color: $lila;
 						color: $white;
 						border-color: $grau;
 					}
 				}
-
 				label {
 					margin-left: 1%;
 				}
 			}
 
 			.suche {
-				height: 50px;
-				margin-top: 35px;
-				width: 283px;
-				margin-left: auto;
-				margin-right: auto;
-
+				height: em(50);
+				margin-top: em(35);
+				width: em(283);
+				@include margin-middle;
 				input#s{
 					vertical-align: middle;
-					width: 250px;
+					width: em(250);
 					border: 1px solid #444;
-					height: 35px;
-					padding-left: 15px;
-					padding-right: 15px;
+					height: em(35);
+					padding-left: em(15);
+					padding-right: em(15);
 					@include border-radius (5px);
 					font-family: $copytext;
 					color: $grau;
@@ -226,20 +196,17 @@ $max: 620px;
 		#footer {
 			font-family: $copytext;
 			text-align: center;
-			font-size: 13px;
-			margin-top: 70px;
+			font-size: em(13);
+			margin-top: em(70);
 			max-width: $max;
 			@include margin-middle;
-
 			a {
 				text-decoration: none;
 				color: $grau;
-				@include opacity-prev;
-
+				@include transition (opacity 0.2s ease-in-out);
 				&:hover {
 					opacity: 0.5;
 				}
 			}
 		}
-
 	}
