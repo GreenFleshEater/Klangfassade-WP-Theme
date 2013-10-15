@@ -97,6 +97,9 @@ $max: em(620);
 			line-height: em(28);
 			margin-bottom: em(20);
 			@include word-break;
+			@media (max-width: $breakpoint) {
+				padding: 20px;
+			}
 			.article {
 				font-family: $copytext;
 				color: $grau;
